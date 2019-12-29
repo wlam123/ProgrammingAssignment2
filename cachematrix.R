@@ -1,4 +1,5 @@
-## initialize an object of type makeCacheMatrix to create a matrix
+## makeCacheMatrix function initialize an object of type makeCacheMatrix 
+## to create a special object matrix to use for caching its inverse later
 
 makeCacheMatrix <- function(x = matrix()) {
         #create variable for inverse
@@ -26,7 +27,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## function that cache the inverse of the matrix
+## The cacheSolve function do a cache of the inverse of the above matrix
 ## and takes object of only type makeCacheMatrix
 
 cacheSolve <- function(x, ...) {
