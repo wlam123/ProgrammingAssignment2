@@ -12,7 +12,7 @@ makeCacheMatrix <- function(x = matrix()) {
         #function for getting the matrix
         get <- function() x
         
-        #functo to set inverse in parent environemnt
+        #function to set inverse in parent environemnt
         setinv <- function(inverse) inv <<- inverse
 
         #functon to get the inverse
