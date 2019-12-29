@@ -12,7 +12,8 @@ makeCacheMatrix <- function(x = matrix()) {
         get <- function() x
         setinv <- function(inverse) inv <<- inverse
         getinv <- function() inv
-        list(set = set, get = get,
+        list(set = set,
+             get = get,
              setinv = setinv,
              getinv = getinv)
 }
@@ -27,8 +28,8 @@ cacheSolve <- function(x, ...) {
                 message("getting cashed data")
                 return(inv)
         }
-        data <- x$get()
-        inv <- solve(data,...)
+        matrix <- x$get()
+        inv <- solve(matrix,...)
         x$setinv(inv)
         inv
 }
